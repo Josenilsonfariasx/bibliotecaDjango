@@ -7,7 +7,7 @@ from hashlib import sha256
 
 
 def login(request):
-    return HttpResponse('Login')
+    return render(request, 'login.html' )
 
 
 def cadastro(request):
