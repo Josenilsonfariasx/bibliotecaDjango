@@ -17,6 +17,7 @@ def cadastro(request):
     return render(request, 'cadastro.html', {'status': status})
 
 def valida_login(request):
+    
     email_login = request.POST.get('Email-login')
     senha_login = request.POST.get('Senha-login')
 
@@ -24,9 +25,6 @@ def valida_login(request):
 
     usuario = Usuario.objects.filter(email = email_login).filter(senha = senha_login)
 
-    if len(usuario) == 0:
-        return redirect('/auth/login/?status=0')
-    
 
 
 def valida_cadastro(request):
