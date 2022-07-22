@@ -17,6 +17,19 @@
 
 <div class="container">
     
+    {%if status == '0'%}
+        <div class="alert alert-success" role="alert">
+            Efetue o Login!!!
+        </div>
+
+    {%endif%}
+
+    {%if status == '1'%}
+        <div class="alert alert-danger" role="alert">
+            Email ou Senha Invalidos!!!
+        </div>
+
+    {%endif%}
 
 <div class = "row">
         
@@ -35,6 +48,7 @@
             <input class="form-control" type ="password" placeholder = "Senha" name = "Senha-login"><br>
             
             <input class="btn btn-info btn-red" type ="submit" value = "enviar">
+            
             
     </div>
 
