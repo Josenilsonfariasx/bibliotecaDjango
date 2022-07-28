@@ -1,4 +1,5 @@
 import email
+from urllib import request
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import redirect
@@ -33,7 +34,11 @@ def valida_login(request):
         request.session['usuario'] = usuario[0].id
         return redirect(f'/livro/home/?id_usuario={request.session["usuario"]}')
 
-    
+def sair(request):
+
+    request.session.flush()
+    return redirect ('/auth/login/')
+
 
 
 def valida_cadastro(request):
