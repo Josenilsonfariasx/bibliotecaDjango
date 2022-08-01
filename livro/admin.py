@@ -3,4 +3,3 @@ from .models import Livros
 
 admin.site.register(Livros)
 
-# Register your models here.
